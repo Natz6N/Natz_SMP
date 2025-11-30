@@ -1,0 +1,4 @@
+prefix: "&a[MySMP] "
+heal-success: "&aYou have been healed!"
+no-permission: "&cYou do not have permission"
+teleport-cooldown: "&ePlease wait before teleporting again"

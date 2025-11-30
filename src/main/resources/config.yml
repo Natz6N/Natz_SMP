@@ -1,0 +1,4 @@
+settings:
+  autosave: true
+  lobby-world: lobby
+  teleport-lobby-on-join: true

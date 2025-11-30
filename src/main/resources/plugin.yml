@@ -1,0 +1,51 @@
+name: MySMPPlugin
+main: com.natzsxn.mysmp.Main
+version: 1.0.0
+api-version: 1.21
+commands:
+  heal:
+    description: Heal yourself
+    usage: /heal
+    permission: mysmp.command.heal
+  lobby:
+    description: Teleport to lobby
+    usage: /lobby
+    permission: mysmp.command.lobby
+  survival:
+    description: Teleport to survival world
+    usage: /survival
+    permission: mysmp.command.survival
+  setlobby:
+    description: Set lobby spawn to your location
+    usage: /setlobby
+    permission: mysmp.command.setlobby
+  setsurvival:
+    description: Set survival spawn to your location
+    usage: /setsurvival
+    permission: mysmp.command.setsurvival
+  mysmp:
+    description: Manage MySMP plugin
+    usage: /mysmp reload
+    permission: mysmp.command.reload
+  sayasetuju:
+    description: Setuju aturan server
+    usage: /sayasetuju
+    permission: mysmp.command.sayasetuju
+permissions:
+  mysmp.command.heal:
+    default: op
+  mysmp.command.lobby:
+    default: true
+  mysmp.command.survival:
+    default: true
+  mysmp.command.setlobby:
+    default: op
+  mysmp.command.setsurvival:
+    default: op
+  mysmp.command.reload:
+    default: op
+  mysmp.command.sayasetuju:
+    default: true
+libraries:
+  - com.zaxxer:HikariCP:5.1.0
+  - org.xerial:sqlite-jdbc:3.46.0.0

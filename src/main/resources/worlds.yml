@@ -1,0 +1,12 @@
+lobby:
+  spawn:
+    world: "lobby"
+    x: 0
+    y: 100
+    z: 0
+survival:
+  spawn:
+    world: "survival"
+    x: 0
+    y: 80
+    z: 0
