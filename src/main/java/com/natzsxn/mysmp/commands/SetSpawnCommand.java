@@ -9,14 +9,14 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Command admin untuk set lobby spawn ke lokasi pemain saat ini.
- * Usage: /setlobby
+ * Command admin untuk set survival spawn ke lokasi pemain saat ini.
+ * Usage: /setspawn
  */
-public class SetLobbyCommand implements CommandExecutor {
+public class SetSpawnCommand implements CommandExecutor {
     private final ConfigManager configManager;
     private final Messager messager;
 
-    public SetLobbyCommand(ConfigManager configManager, Messager messager) {
+    public SetSpawnCommand(ConfigManager configManager, Messager messager) {
         this.configManager = configManager;
         this.messager = messager;
     }
@@ -34,8 +34,8 @@ public class SetLobbyCommand implements CommandExecutor {
             return true;
         }
 
-        configManager.setSpawn("lobby", p.getLocation());
-        p.sendMessage(messager.success("Lobby spawn updated to your location."));
+        configManager.setSpawn("survival", p.getLocation());
+        p.sendMessage(messager.success("Survival spawn updated to your location."));
         return true;
     }
 }

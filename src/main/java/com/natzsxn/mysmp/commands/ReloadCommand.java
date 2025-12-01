@@ -24,8 +24,18 @@ public class ReloadCommand implements CommandExecutor {
             sender.sendMessage(messager.error("No permission"));
             return true;
         }
-        configManager.reloadAll();
-        sender.sendMessage(messager.success("Configs reloaded"));
+        
+        if (args.length == 0 || !args[0].equalsIgnoreCase("reload")) {
+            sender.sendMessage(messager.error("Usage: /" + label + " reload"));
+            return true;
+        }
+        
+        try {
+            configManager.reloadAll();
+            sender.sendMessage(messager.success("All configurations reloaded successfully"));
+        } catch (Exception e) {
+            sender.sendMessage(messager.error("Failed to reload configurations: " + e.getMessage()));
+        }
         return true;
     }
 }

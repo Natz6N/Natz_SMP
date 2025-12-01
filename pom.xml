@@ -59,6 +59,14 @@
       <version>3.107.0</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- LuckPerms API (optional, provided at runtime) -->
+    <dependency>
+      <groupId>net.luckperms</groupId>
+      <artifactId>api</artifactId>
+      <version>5.4</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 
   <repositories>
@@ -94,33 +102,6 @@
           </includes>
           <skipTests>true</skipTests>
         </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.5.1</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-            <configuration>
-              <createDependencyReducedPom>false</createDependencyReducedPom>
-              <relocations>
-                <relocation>
-                  <pattern>com.zaxxer.hikari</pattern>
-                  <shadedPattern>com.natzsxn.mysmp.libs.hikari</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.sqlite</pattern>
-                  <shadedPattern>com.natzsxn.mysmp.libs.sqlite</shadedPattern>
-                </relocation>
-              </relocations>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
 
       <!-- Copy built jar to local server plugins directory on package -->
