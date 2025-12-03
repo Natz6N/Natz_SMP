@@ -1,22 +1,3 @@
+# General configuration for NatzSMP
 settings:
-  autosave: true
-  lobby-world: lobby
-  teleport-lobby-on-join: true
-  owner-uuid: "7e6190cb-d62b-49aa-881d-971042a95424"
-  owner-username: "anestesiar"
-
-locations:
-  lobby:
-    world: "lobby"
-    x: 9.20
-    y: 84.00
-    z: 18.22
-    yaw: 0.0
-    pitch: 0.0
-  survival:
-    world: "survival"
-    x: 0.0
-    y: 80.0
-    z: 0.0
-    yaw: 0.0
-    pitch: 0.0
+  debug: false

@@ -1,4 +1,3 @@
-prefix: "&a[MySMP] "
-heal-success: "&aYou have been healed!"
-no-permission: "&cYou do not have permission"
-teleport-cooldown: "&ePlease wait before teleporting again"
+prefix: "&6[NatzSMP]&r "
+no-permission: "&cYou don't have permission."
+usage-natz: "&eUsage: /natz <holo|npc|econ|level>"

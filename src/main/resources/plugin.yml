@@ -1,98 +1,20 @@
-name: MySMPPlugin
-version: 1.1.0
-main: com.natzsxn.mysmp.Main
-api-version: 1.21
-authors: [Natzsxn]
-description: MySMP Plugin with Warp and Database support
+name: NatzSMP
+main: com.natzdev.natzsmp.NatzSMP
+version: 0.1.0
+api-version: "1.21"
+author: NatzSMP
+softdepend:
+  - PlaceholderAPI
+  - Vault
+  - LuckPerms
 
 commands:
-  warp:
-    description: Warp to lobby or survival
-    usage: /warp <lobby|survival>
-    permission: mysmp.command.warp
-  setlobbyspawn:
-    description: Set the lobby spawn point
-    usage: /setlobbyspawn
-    permission: mysmp.admin.setspawn
-  setsurvivalspawn:
-    description: Set the survival spawn point
-    usage: /setsurvivalspawn
-    permission: mysmp.admin.setspawn
-  heal:
-    description: Heal yourself
-    usage: /heal
-    permission: mysmp.command.heal
-  reload:
-    description: Reload plugin configuration
-    usage: /reload
-    permission: mysmp.command.reload
-  sayasetuju:
-    description: Agree to the rules
-    usage: /sayasetuju
-    permission: mysmp.command.sayasetuju
-  owner:
-    description: Owner commands for server management
-    usage: /owner <kick|ban|blacklist|reload>
-    permission: mysmp.owner
-  setowner:
-    description: Set the server owner UUID
-    usage: /setowner <player|uuid>
-    permission: mysmp.admin.config
-  reloadowner:
-    description: Reload owner config and reapply effects
-    usage: /reloadowner
-    permission: mysmp.admin.config
-  reloadnpc:
-    description: Respawn NPC and holograms
-    usage: /reloadnpc
-    permission: mysmp.admin.reloadnpc
-  setlobbyworld:
-    description: Set lobby world used for NPC and holograms
-    usage: /setlobbyworld <worldName>
-    permission: mysmp.admin.config
-  setlobby:
-    description: Set lobby spawn to your current location
-    usage: /setlobby
-    permission: mysmp.admin.setspawn
-  setspawn:
-    description: Set survival spawn to your current location
-    usage: /setspawn
-    permission: mysmp.admin.setspawn
+  natz:
+    description: NatzSMP admin command
+    usage: /natz <holo|npc|econ|level>
+    permission: natz.admin
 
 permissions:
-  mysmp.command.warp:
-    description: Allow warping
-    default: true
-  mysmp.warp.lobby:
-    description: Allow warping to lobby
-    default: true
-  mysmp.warp.survival:
-    description: Allow warping to survival
-    default: true
-  mysmp.admin.setspawn:
-    description: Allow setting spawns
-    default: op
-  mysmp.lobby.build:
-    description: Allow building in lobby
-    default: op
-  mysmp.lobby.pvp:
-    description: Allow PvP in lobby
-    default: false
-  mysmp.owner:
-    description: Owner permissions
-    default: op
-  mysmp.command.heal:
-    description: Allow healing
-    default: op
-  mysmp.command.reload:
-    description: Allow reloading
-    default: op
-  mysmp.command.sayasetuju:
-    description: Allow agreeing to rules
-    default: true
-  mysmp.admin.config:
-    description: Allow updating critical configuration values
-    default: op
-  mysmp.admin.reloadnpc:
-    description: Allow reloading NPC and holograms
+  natz.admin:
+    description: Allows use of /natz admin commands
     default: op

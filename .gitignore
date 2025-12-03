@@ -1,6 +1,7 @@
-target/
+# .vscode/
 .idea/
-*.iml
-*.jar
-logs/
-data.sqlite
+alamak/
+libs/
+target/
+build/
+*.zip
